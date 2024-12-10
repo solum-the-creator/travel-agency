@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 
-import styles from './base-layout.module.scss';
+import styles from './base-block.module.scss';
 
-type BaseLayoutProps = {
+type BaseBlockProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-export const BaseLayout: React.FC<BaseLayoutProps> = ({ children, className }) => {
+export const BaseBlock: React.FC<BaseBlockProps> = ({ children, className }) => {
   return (
     <div className={classNames(styles.container, className)}>
       <div className={styles.content}>{children}</div>

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import { companyLinks, quickLinks, socialLinks } from '@/constants/routes';
 
-import { BaseLayout } from '../base-layout/base-layout';
+import { BaseBlock } from '../base-block/base-block';
 import { DecorationText } from '../decoration-text/decoration-text';
 import { SubscribeInput } from '../subscribe-input/subscribe-input';
 
@@ -13,7 +13,7 @@ import styles from './footer.module.scss';
 export const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      <BaseLayout className={styles.container}>
+      <BaseBlock className={styles.container}>
         <div className={styles.content}>
           <div className={styles.column}>
             <DecorationText colorVariant="secondary">Paradise View</DecorationText>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </BaseLayout>
+      </BaseBlock>
 
       <div className={styles.bottom}>
         <span className={styles.copyright}>Paradise view 2024</span>

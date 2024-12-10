@@ -1,7 +1,7 @@
 import bgImage from '@public/images/hero-section-bg.jpg';
 import Image from 'next/image';
 
-import { BaseLayout } from '@/components/base-layout/base-layout';
+import { BaseBlock } from '@/components/base-block/base-block';
 import { DecorationText } from '@/components/decoration-text/decoration-text';
 import { TourButton } from '@/components/tour-button/tour-button';
 import { routes } from '@/constants/routes';
@@ -10,7 +10,7 @@ import styles from './hero-section.module.scss';
 
 export const HeroSection: React.FC = () => {
   return (
-    <BaseLayout>
+    <BaseBlock>
       <section className={styles.section}>
         <div className={styles.content}>
           <DecorationText colorVariant="primary">
@@ -25,11 +25,11 @@ export const HeroSection: React.FC = () => {
             src={bgImage}
             alt="Home with pool"
             fill={true}
-            priority={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw"
             className={styles.image}
           />
         </div>
       </section>
-    </BaseLayout>
+    </BaseBlock>
   );
 };
