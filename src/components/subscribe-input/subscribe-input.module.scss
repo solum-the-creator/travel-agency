@@ -1,0 +1,22 @@
+.subscribeInput {
+  display: flex;
+  padding: 0.3rem;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: $secondary;
+  overflow: hidden;
+  max-width: 22rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+}
+
+.button {
+  font-size: 0.875rem;
+  border: none;
+}

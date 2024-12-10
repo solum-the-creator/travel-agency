@@ -1,0 +1,13 @@
+.decorationText {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+
+  &.primary {
+    color: $primary;
+  }
+
+  &.secondary {
+    color: $secondary;
+  }
+}

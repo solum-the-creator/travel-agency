@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 import styles from './container.module.scss';
 
@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
-    <div className={classnames(styles.container, className)}>
+    <div className={classNames(styles.container, className)}>
       <div className={styles.content}>{children}</div>
     </div>
   );
