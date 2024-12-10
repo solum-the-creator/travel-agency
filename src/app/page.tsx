@@ -1,10 +1,14 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Button } from '@solumzy/ui-lib-travel-agency';
+import Image from 'next/image';
+
+import '@solumzy/ui-lib-travel-agency/dist/index.css';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <Button borderRadius="large">Button</Button>
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
