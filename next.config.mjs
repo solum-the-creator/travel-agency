@@ -7,8 +7,7 @@ const nextConfig = {
                     $secondary: #fafafa;
                     $textPrimary: #1c1c1c;
                     $textSecondary: #454545;
-                    $textLight: #ffffff;
-                    $accent: #7c6a46;`,
+                    $textLight: #ffffff;`,
   },
 };
 
