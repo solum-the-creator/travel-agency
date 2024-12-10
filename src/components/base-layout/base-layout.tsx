@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 
-import styles from './container.module.scss';
+import styles from './base-layout.module.scss';
 
-type ContainerProps = {
+type BaseLayoutProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-export const Container: React.FC<ContainerProps> = ({ children, className }) => {
+export const BaseLayout: React.FC<BaseLayoutProps> = ({ children, className }) => {
   return (
     <div className={classNames(styles.container, className)}>
       <div className={styles.content}>{children}</div>

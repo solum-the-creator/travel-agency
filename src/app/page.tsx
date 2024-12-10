@@ -1,13 +1,9 @@
-import { Button } from '@solumzy/ui-lib-travel-agency';
-
-import '@solumzy/ui-lib-travel-agency/dist/index.css';
+import { HeroSection } from '@/components/containers/home-page/hero-section/hero-section';
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <Button borderRadius="large">Button</Button>
-      </main>
-    </div>
+    <main>
+      <HeroSection />
+    </main>
   );
 }

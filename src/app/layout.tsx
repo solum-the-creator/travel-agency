@@ -4,6 +4,7 @@ import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
 
 import '@/styles/global.scss';
+import '@solumzy/ui-lib-travel-agency/dist/index.css';
 
 export const metadata: Metadata = {
   title: 'Travel Agency',

@@ -3,6 +3,7 @@ export const routes = {
   about: '/about',
   rooms: '/rooms',
   contact: '/contact',
+  tour: '/tour',
 } as const;
 
 export type RoutePath = (typeof routes)[keyof typeof routes];
