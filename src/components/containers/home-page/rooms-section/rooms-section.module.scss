@@ -1,0 +1,59 @@
+.section {
+  padding: 1.75rem 0 3.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    z-index: -1;
+
+    .image {
+      object-fit: cover;
+      filter: opacity(0.2);
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    .contentHeader {
+      color: $textLight;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .title {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      .line {
+        max-width: 9rem;
+        width: 100%;
+        height: 6px;
+        background-color: $secondary;
+      }
+
+      .text {
+        font-weight: 500;
+      }
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+}
