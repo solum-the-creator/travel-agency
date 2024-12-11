@@ -1,5 +1,74 @@
 {
+  "HeaderRoutes": {
+    "home": "Heim",
+    "about": "Über",
+    "rooms": "Rooms",
+    "contact": "Kontakt"
+  },
   "HomePage": {
-    "title": "Hallo Welt!"
+    "HeroSection": {
+      "largeTitle": "Paradiesblick",
+      "title": "Hotel für jeden Moment voller Emotionen",
+      "text": "Jeder Moment fühlt sich an wie das erste Mal in paradise view",
+      "imageAlt": "Haus mit Pool",
+      "button": "Machen Sie eine Tour"
+    },
+    "FacilitiesSection": {
+      "title": "Unsere Einrichtungen",
+      "text": "Wir bieten moderne (5 Sterne) Hoteleinrichtungen für Ihren Komfort.",
+      "facilities": {
+        "swimmingPool": "Swimmingpool",
+        "wifi": "WLAN",
+        "breakfast": "Breakfast",
+        "gym": "Fitnessraum",
+        "game": "Spielezentrum",
+        "light": "24/7 Licht",
+        "laundry": "Wäsche",
+        "parking": "Parkplatz"
+      }
+    },
+    "RoomsSection": {
+      "title": "Luxuszimmer",
+      "subtitle": "Alle Zimmer sind Design für Ihren Komfort",
+      "imageAlt": "Hotelzimmer"
+    },
+    "TestimoniesSection": {
+      "title": "Zeugnis"
+    }
+  },
+  "Footer": {
+    "title": "Paradiesblick",
+    "text": "Der Service im Hotel Monteleone war außergewöhnlich. Es gab absolut kein Problem, das nicht rechtzeitig und mit zufriedenstellenden Ergebnissen angegangen wurde. Wir waren besonders beeindruckt davon, wie das Hotelpersonal unsere Bedürfnisse vorweggenommen hat (regelmäßig im Sitzungssaal vorbeigekommen, um sich bei uns zu erkundigen)",
+    "copyright": "Paradiesblick 2024",
+    "QuickLinks": {
+      "title": "Schnelle Verbindungen",
+      "roomBooking": "Zimmer buchen",
+      "rooms": "Rooms",
+      "contact": "Kontakt",
+      "explore": "Erkunden"
+    },
+    "Company": {
+      "title": "Unternehmen",
+      "privacyPolicy": "Datenschutzerklärung",
+      "refundPolicy": "Rückzahlungspolitik",
+      "faq": "F.A.Q.",
+      "about": "Über"
+    },
+    "SocialMedia": {
+      "title": "Sozialmittel",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "Linkedin"
+    },
+    "Newsletter": {
+      "title": "Newsletter",
+      "text": "Bitte abonnieren Sie unseren Newsletter, um die neuesten Angebote für unsere Zimmer und Urlaubsrabatte zu erhalten.",
+      "button": "Abonnieren",
+      "placeholder": "Ihre E-Mail-Adresse"
+    }
+  },
+  "Common": {
+    "roomsAvailable": "{roomsCount} verfügbar"
   }
 }

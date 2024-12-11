@@ -1,5 +1,6 @@
 import roomsBgImage from '@public/images/hotel-rooms-bg.jpg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { BaseBlock } from '@/components/base-block/base-block';
 import { RoomSnippetCard } from '@/components/room-snippet-card/room-snippet-card';
@@ -8,6 +9,8 @@ import { roomsSnippets } from '@/constants/rooms';
 import styles from './rooms-section.module.scss';
 
 export const RoomsSection: React.FC = () => {
+  const t = useTranslations('HomePage.RoomsSection');
+
   const roomsCards = roomsSnippets.map(({ id, image, description, roomsCount }) => (
     <RoomSnippetCard key={id} image={image} description={description} roomsCount={roomsCount} />
   ));
@@ -17,7 +20,7 @@ export const RoomsSection: React.FC = () => {
       <div className={styles.background}>
         <Image
           src={roomsBgImage}
-          alt="Hotel Rooms"
+          alt={t('imageAlt')}
           fill={true}
           sizes="100vw"
           className={styles.image}
@@ -26,9 +29,9 @@ export const RoomsSection: React.FC = () => {
       <BaseBlock>
         <div className={styles.content}>
           <div className={styles.contentHeader}>
-            <h2 className={styles.title}>Luxurious Rooms</h2>
+            <h2 className={styles.title}>{t('title')}</h2>
             <div className={styles.line} />
-            <p className={styles.text}>All room are design for your comfort</p>
+            <p className={styles.text}>{t('subtitle')}</p>
           </div>
           <div className={styles.cards}>{roomsCards}</div>
         </div>

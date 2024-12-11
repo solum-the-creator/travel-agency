@@ -1,5 +1,6 @@
 import bgImage from '@public/images/hero-section-bg.jpg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { BaseBlock } from '@/components/base-block/base-block';
 import { DecorationText } from '@/components/decoration-text/decoration-text';
@@ -9,21 +10,23 @@ import { routes } from '@/constants/routes';
 import styles from './hero-section.module.scss';
 
 export const HeroSection: React.FC = () => {
+  const t = useTranslations('HomePage.HeroSection');
+
   return (
     <BaseBlock>
       <section className={styles.section}>
         <div className={styles.content}>
           <DecorationText colorVariant="primary">
-            <h2>Paradise View</h2>
+            <h2>{t('largeTitle')}</h2>
           </DecorationText>
-          <h1 className={styles.title}>Hotel for every moment rich in emotion</h1>
-          <p className={styles.text}>Every moment feels like the first time in paradise view</p>
-          <TourButton href={routes.tour}>Take a tour</TourButton>
+          <h1 className={styles.title}>{t('title')}</h1>
+          <p className={styles.text}>{t('text')}</p>
+          <TourButton href={routes.tour}>{t('button')}</TourButton>
         </div>
         <div className={styles.imageWrapper}>
           <Image
             src={bgImage}
-            alt="Home with pool"
+            alt={t('imageAlt')}
             fill={true}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw"
             className={styles.image}

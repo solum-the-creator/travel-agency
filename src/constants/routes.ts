@@ -9,34 +9,34 @@ export const routes = {
 export type RoutePath = (typeof routes)[keyof typeof routes];
 
 export type Route = {
-  title: string;
+  titleKey: string;
   route: RoutePath;
 };
 
 export const routesList: Route[] = [
-  { title: 'Home', route: routes.home },
-  { title: 'About', route: routes.about },
-  { title: 'Rooms', route: routes.rooms },
-  { title: 'Contact', route: routes.contact },
+  { titleKey: 'home', route: routes.home },
+  { titleKey: 'about', route: routes.about },
+  { titleKey: 'rooms', route: routes.rooms },
+  { titleKey: 'contact', route: routes.contact },
 ];
 
 export const quickLinks = [
-  { title: 'Room booking', route: routes.about },
-  { title: 'Rooms', route: routes.rooms },
-  { title: 'Contact', route: routes.contact },
-  { title: 'Explore', route: routes.about },
+  { titleKey: 'roomBooking', route: routes.about },
+  { titleKey: 'rooms', route: routes.rooms },
+  { titleKey: 'contact', route: routes.contact },
+  { titleKey: 'explore', route: routes.about },
 ];
 
 export const companyLinks = [
-  { title: 'Privacy policy', route: routes.about },
-  { title: 'Refund policy', route: routes.rooms },
-  { title: 'F.A.Q.', route: routes.contact },
-  { title: 'About', route: routes.about },
+  { titleKey: 'privacyPolicy', route: routes.about },
+  { titleKey: 'refundPolicy', route: routes.rooms },
+  { titleKey: 'faq', route: routes.contact },
+  { titleKey: 'about', route: routes.about },
 ];
 
 export const socialLinks = [
-  { title: 'Facebook', route: routes.about },
-  { title: 'Twitter', route: routes.contact },
-  { title: 'Instagram', route: routes.rooms },
-  { title: 'Linkedin', route: routes.about },
+  { titleKey: 'facebook', route: routes.about },
+  { titleKey: 'twitter', route: routes.contact },
+  { titleKey: 'instagram', route: routes.rooms },
+  { titleKey: 'linkedin', route: routes.about },
 ];

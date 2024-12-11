@@ -1,5 +1,74 @@
 {
+  "HeaderRoutes": {
+    "home": "Home",
+    "about": "About",
+    "rooms": "Rooms",
+    "contact": "Contact"
+  },
   "HomePage": {
-    "title": "Hello world!"
+    "HeroSection": {
+      "largeTitle": "Paradise View",
+      "title": "Hotel for every moment rich in emotion",
+      "text": "Every moment feels like the first time in paradise view",
+      "imageAlt": "Home with pool",
+      "button": "Take a tour"
+    },
+    "FacilitiesSection": {
+      "title": "Our Facilities",
+      "text": "We offer modern (5 star) hotel facilities for your comfort.",
+      "facilities": {
+        "swimmingPool": "Swimming Pool",
+        "wifi": "Wifi",
+        "breakfast": "Breakfast",
+        "gym": "Gym",
+        "game": "Game center",
+        "light": "24/7 Light",
+        "laundry": "Laundry",
+        "parking": "Parking space"
+      }
+    },
+    "RoomsSection": {
+      "title": "Luxurious Rooms",
+      "subtitle": "All room are design for your comfort",
+      "imageAlt": "Hotel Rooms"
+    },
+    "TestimoniesSection": {
+      "title": "Testimonies"
+    }
+  },
+  "Footer": {
+    "title": "Paradise View",
+    "text": "The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us)",
+    "copyright": "Paradise view 2024",
+    "QuickLinks": {
+      "title": "Quick links",
+      "roomBooking": "Room booking",
+      "rooms": "Rooms",
+      "contact": "Contact",
+      "explore": "Explore"
+    },
+    "Company": {
+      "title": "Company",
+      "privacyPolicy": "Privacy policy",
+      "refundPolicy": "Refund policy",
+      "faq": "F.A.Q.",
+      "about": "About"
+    },
+    "SocialMedia": {
+      "title": "Social media",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "Linkedin"
+    },
+    "Newsletter": {
+      "title": "Newsletter",
+      "text": "Kindly subscribe to our newsletter to get latest deals on our rooms and vacation discount.",
+      "button": "Subscribe",
+      "placeholder": "Enter your email"
+    }
+  },
+  "Common": {
+    "roomsAvailable": "{roomsCount} rooms available"
   }
 }

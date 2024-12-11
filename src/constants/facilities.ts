@@ -10,42 +10,42 @@ import wifiIcon from '@public/images/icons/wifi-icon.svg';
 export const facilities = [
   {
     id: 1,
-    title: 'Swimming Pool',
+    titleKey: 'swimmingPool',
     icon: swimmingIcon,
   },
   {
     id: 2,
-    title: 'Wifi',
+    titleKey: 'wifi',
     icon: wifiIcon,
   },
   {
     id: 3,
-    title: 'Breakfast',
+    titleKey: 'breakfast',
     icon: foodIcon,
   },
   {
     id: 4,
-    title: 'Gym',
+    titleKey: 'gym',
     icon: gymIcon,
   },
   {
     id: 5,
-    title: 'Game center',
+    titleKey: 'game',
     icon: gameIcon,
   },
   {
     id: 6,
-    title: '24/7 Light',
+    titleKey: 'light',
     icon: lightIcon,
   },
   {
     id: 7,
-    title: 'Laundry',
+    titleKey: 'laundry',
     icon: laundryIcon,
   },
   {
     id: 8,
-    title: 'Parking space',
+    titleKey: 'parking',
     icon: parkingIcon,
   },
 ];

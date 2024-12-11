@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import { companyLinks, quickLinks, socialLinks } from '@/constants/routes';
 
@@ -11,39 +12,36 @@ import { LinksColumn } from './links-column/links-column';
 import styles from './footer.module.scss';
 
 export const Footer: React.FC = () => {
+  const t = useTranslations('Footer');
+
   return (
     <footer className={styles.footer}>
       <BaseBlock className={styles.container}>
         <div className={styles.content}>
           <div className={styles.column}>
-            <DecorationText colorVariant="secondary">Paradise View</DecorationText>
-            <p className={styles.text}>
-              The service at the Hotel Monteleone was exceptional. There was absolutely no issue
-              that was not addressed timely and with satisfactory results. We were particulary
-              impressed with how the hotel staff anticipated our needs (periodically coming by the
-              Board Room to check with us)
-            </p>
+            <DecorationText colorVariant="secondary">{t('title')}</DecorationText>
+            <p className={styles.text}>{t('text')}</p>
           </div>
 
-          <LinksColumn title="Quick links" links={quickLinks} />
-          <LinksColumn title="Company" links={companyLinks} />
-          <LinksColumn title="Social media" links={socialLinks} />
+          <LinksColumn title={t('QuickLinks.title')} linksKey="QuickLinks" links={quickLinks} />
+          <LinksColumn title={t('Company.title')} linksKey="Company" links={companyLinks} />
+          <LinksColumn title={t('SocialMedia.title')} linksKey="SocialMedia" links={socialLinks} />
 
           <div className={classNames(styles.column, styles.newsletter)}>
-            <h4 className={styles.title}>Newsletter</h4>
+            <h4 className={styles.title}>{t('Newsletter.title')}</h4>
             <div className={styles.newsletterContent}>
-              <p className={styles.text}>
-                Kindly subscribe to our newsletter to get latest deals on our rooms and vacation
-                discount.
-              </p>
-              <SubscribeInput />
+              <p className={styles.text}>{t('Newsletter.text')}</p>
+              <SubscribeInput
+                placeholder={t('Newsletter.placeholder')}
+                buttonText={t('Newsletter.button')}
+              />
             </div>
           </div>
         </div>
       </BaseBlock>
 
       <div className={styles.bottom}>
-        <span className={styles.copyright}>Paradise view 2024</span>
+        <span className={styles.copyright}>{t('copyright')}</span>
       </div>
     </footer>
   );
