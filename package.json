@@ -10,7 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@solumzy/ui-lib-travel-agency": "^1.0.0",
+    "@solumzy/ui-lib-travel-agency": "^1.0.2",
     "next": "14.2.20",
     "next-intl": "^3.26.1",
     "react": "^18",

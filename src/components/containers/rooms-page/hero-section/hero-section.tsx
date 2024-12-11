@@ -21,8 +21,7 @@ export const HeroSection: React.FC = () => {
           src={roomImage}
           alt={t('imageAlt')}
           fill={true}
-          sizes="100vw"
-          priority={true}
+          sizes="(max-width: 768px) 40vw, 100vw"
           className={styles.image}
         />
       </div>
