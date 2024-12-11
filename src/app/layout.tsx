@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 
 import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
@@ -11,17 +13,23 @@ export const metadata: Metadata = {
   description: 'Travel Agency by Solumzy',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

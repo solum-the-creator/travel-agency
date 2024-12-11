@@ -1,7 +1,7 @@
 import { Logo } from '@/components/logo/logo';
 
 import { BaseBlock } from '../base-block/base-block';
-import { LanguageSwitcher } from '../language-switcher/language-switcher';
+import { LocaleSwitcher } from '../locale-switcher/locale-switcher';
 import { Navbar } from '../navbar/navbar';
 
 import styles from './header.module.scss';
@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
           <Logo />
           <Navbar />
         </div>
-        <LanguageSwitcher />
+        <LocaleSwitcher />
       </header>
     </BaseBlock>
   );
