@@ -1,0 +1,39 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  position: relative;
+
+  .buttons {
+    align-self: flex-end;
+    display: flex;
+    gap: 3rem;
+    margin-right: 6rem;
+  }
+
+  .sliderContainer {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 2.5rem;
+    cursor: grab;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .sliderItem {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
