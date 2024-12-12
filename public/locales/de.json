@@ -47,6 +47,12 @@
       "bookButton": "Jetzt buchen"
     }
   },
+  "RoomDetailsPage": {
+    "HeroSection": {
+      "title": "Zimmer und Suiten",
+      "imageAlt": "Zimmer mit Bett"
+    }
+  },
   "Footer": {
     "title": "Paradiesblick",
     "text": "Der Service im Hotel Monteleone war außergewöhnlich. Es gab absolut kein Problem, das nicht rechtzeitig und mit zufriedenstellenden Ergebnissen angegangen wurde. Wir waren besonders beeindruckt davon, wie das Hotelpersonal unsere Bedürfnisse vorweggenommen hat (regelmäßig im Sitzungssaal vorbeigekommen, um sich bei uns zu erkundigen)",

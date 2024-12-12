@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
+import { routes } from '@/constants/routes';
+
 import { ServiceItem } from '../service-item/service-item';
 
 import styles from './room-card.module.scss';
@@ -20,7 +22,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({ id, image, title, isAvailabl
 
   return (
     <div className={styles.container}>
-      <Link href={`/room/${id}`} className={styles.link}>
+      <Link href={routes.room(id)} className={styles.link}>
         <div className={styles.imageWrapper}>
           <Image
             src={image}
@@ -33,7 +35,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({ id, image, title, isAvailabl
       </Link>
       <div className={styles.content}>
         <div className={styles.contentHeader}>
-          <Link href={`/room/${id}`} className={styles.link}>
+          <Link href={routes.room(id)} className={styles.link}>
             <h3 className={styles.title}>{title}</h3>
           </Link>
           <span className={styles.status}>{t('isAvailable', { isAvailable })}</span>

@@ -4,6 +4,7 @@ export const routes = {
   rooms: '/rooms',
   contact: '/contact',
   tour: '/tour',
+  room: (id: number) => `/rooms/${id}`,
 } as const;
 
 export type RoutePath = (typeof routes)[keyof typeof routes];

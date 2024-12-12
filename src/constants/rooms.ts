@@ -17,6 +17,15 @@ export type RoomCard = {
   price: string;
 };
 
+export type Room = {
+  id: number;
+  image: string;
+  title: string;
+  price: string;
+  rating: number;
+  description: string;
+};
+
 export const roomsSnippets: RoomSnippet[] = [
   {
     id: 1,
@@ -101,5 +110,98 @@ export const roomCards: RoomCard[] = [
     title: 'Family Room',
     isAvailable: false,
     price: '200,000',
+  },
+];
+
+export const rooms: Room[] = [
+  {
+    id: 1,
+    image: roomImage1.src,
+    title: 'Single Room',
+    price: '100,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 2,
+    image: roomImage2.src,
+    title: 'Double Room',
+    price: '150,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 3,
+    image: roomImage3.src,
+    title: 'Family Room',
+    price: '200,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 4,
+    image: roomImage1.src,
+    title: 'Single Room',
+    price: '100,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 5,
+    image: roomImage2.src,
+    title: 'Double Room',
+    price: '150,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 6,
+    image: roomImage3.src,
+    title: 'Family Room',
+    price: '200,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 7,
+    image: roomImage1.src,
+    title: 'Single Room',
+    price: '100,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 8,
+    image: roomImage2.src,
+    title: 'Double Room',
+    price: '150,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
+  },
+  {
+    id: 9,
+    image: roomImage3.src,
+    title: 'Family Room',
+    price: '200,000',
+    rating: 4,
+    description: `This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet.
+    The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed.
+    The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.`,
   },
 ];

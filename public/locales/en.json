@@ -47,6 +47,12 @@
       "bookButton": "Book now"
     }
   },
+  "RoomDetailsPage": {
+    "HeroSection": {
+      "title": "Rooms and Suites",
+      "imageAlt": "Room with bed"
+    }
+  },
   "Footer": {
     "title": "Paradise View",
     "text": "The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us)",
