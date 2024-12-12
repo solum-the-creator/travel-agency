@@ -51,6 +51,10 @@
     "HeroSection": {
       "title": "Zimmer und Suiten",
       "imageAlt": "Zimmer mit Bett"
+    },
+    "DetailsSection": {
+      "reviewCount": "5 Kundenbewertung",
+      "reservationButton": "Reservierung"
     }
   },
   "Footer": {

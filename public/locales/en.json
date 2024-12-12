@@ -51,6 +51,10 @@
     "HeroSection": {
       "title": "Rooms and Suites",
       "imageAlt": "Room with bed"
+    },
+    "DetailsSection": {
+      "reviewCount": "5 Customer Review",
+      "reservationButton": "Reservation"
     }
   },
   "Footer": {

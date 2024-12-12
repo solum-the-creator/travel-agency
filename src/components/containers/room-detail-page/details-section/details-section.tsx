@@ -1,4 +1,5 @@
 import { Button, Rating } from '@solumzy/ui-lib-travel-agency';
+import { useTranslations } from 'next-intl';
 
 import { BaseBlock } from '@/components/base-block/base-block';
 import { RoomGallery } from '@/components/room-gallery/room-gallery';
@@ -20,6 +21,8 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
   description,
   images,
 }) => {
+  const t = useTranslations('RoomDetailsPage.DetailsSection');
+
   return (
     <section className={styles.section}>
       <BaseBlock>
@@ -33,11 +36,11 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
             <div className={styles.row}>
               <Rating value={rating} />
               <div className={styles.line} />
-              <span className={styles.reviews}>5 Customer Review</span>
+              <span className={styles.reviews}>{t('reviewCount')}</span>
             </div>
             <p className={styles.description}>{description}</p>
             <Button variant="outline" borderRadius="medium" className={styles.button}>
-              Reservation
+              {t('reservationButton')}
             </Button>
           </div>
         </div>
