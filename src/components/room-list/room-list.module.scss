@@ -1,0 +1,11 @@
+.roomList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.loading {
+  margin: 2rem 0;
+}

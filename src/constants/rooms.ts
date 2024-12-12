@@ -9,6 +9,14 @@ export type RoomSnippet = {
   roomsCount?: number;
 };
 
+export type RoomCard = {
+  id: number;
+  image: string;
+  title: string;
+  isAvailable: boolean;
+  price: string;
+};
+
 export const roomsSnippets: RoomSnippet[] = [
   {
     id: 1,
@@ -27,5 +35,71 @@ export const roomsSnippets: RoomSnippet[] = [
     image: roomImage3.src,
     description: 'Television set, Extra sheets, Breakfast, and fireplace, Console and bed rest',
     roomsCount: 8,
+  },
+];
+
+export const roomCards: RoomCard[] = [
+  {
+    id: 1,
+    image: roomImage1.src,
+    title: 'Single Room',
+    isAvailable: true,
+    price: '100,000',
+  },
+  {
+    id: 2,
+    image: roomImage2.src,
+    title: 'Double Room',
+    isAvailable: true,
+    price: '150,000',
+  },
+  {
+    id: 3,
+    image: roomImage3.src,
+    title: 'Family Room',
+    isAvailable: false,
+    price: '200,000',
+  },
+  {
+    id: 4,
+    image: roomImage1.src,
+    title: 'Single Room',
+    isAvailable: true,
+    price: '100,000',
+  },
+  {
+    id: 5,
+    image: roomImage2.src,
+    title: 'Double Room',
+    isAvailable: true,
+    price: '150,000',
+  },
+  {
+    id: 6,
+    image: roomImage3.src,
+    title: 'Family Room',
+    isAvailable: false,
+    price: '200,000',
+  },
+  {
+    id: 7,
+    image: roomImage1.src,
+    title: 'Single Room',
+    isAvailable: true,
+    price: '100,000',
+  },
+  {
+    id: 8,
+    image: roomImage2.src,
+    title: 'Double Room',
+    isAvailable: true,
+    price: '150,000',
+  },
+  {
+    id: 9,
+    image: roomImage3.src,
+    title: 'Family Room',
+    isAvailable: false,
+    price: '200,000',
   },
 ];
