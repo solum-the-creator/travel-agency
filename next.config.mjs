@@ -8,6 +8,7 @@ const nextConfig = {
     silenceDeprecations: ['legacy-js-api'],
     additionalData: `$backgroundPrimary: #ffffff;
                     $backgroundSecondary: #fafafa;
+                    $backgroundPrimaryLight: #f9f1e7;
                     $primary: #7c6a46;
                     $primaryHover: #bcb388;
                     $secondary: #fafafa;

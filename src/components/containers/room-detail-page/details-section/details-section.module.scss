@@ -1,0 +1,19 @@
+.section {
+  padding: 7rem 0 5rem;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+    .galleryWrapper {
+      width: 100%;
+      max-width: 32rem;
+    }
+
+    .roomInfo {
+      width: 100%;
+      max-width: 38rem;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { HeroSection } from '@/components/containers/room-detail-page/hero-section';
+import { DetailsSection } from '@/components/containers/room-detail-page/details-section/details-section';
+import { HeroSection } from '@/components/containers/room-detail-page/hero-section/hero-section';
 import { rooms } from '@/constants/rooms';
 import { getRoomById } from '@/utils/room-utils';
 
@@ -40,6 +41,7 @@ export default function RoomPage({ params }: { params: RoomPageParams }) {
   return (
     <main>
       <HeroSection />
+      <DetailsSection images={room.images} />
       <h1>{room.title}</h1>
       <p>{room.description}</p>
     </main>

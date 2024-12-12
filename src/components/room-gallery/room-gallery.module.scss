@@ -1,0 +1,58 @@
+.gallery {
+  display: flex;
+  gap: 1rem;
+
+  .previewList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .previewButton {
+      border: none;
+      padding: 0.25rem;
+      cursor: pointer;
+      background: $backgroundPrimaryLight;
+      border-radius: 0.25rem;
+      outline: none;
+      transition: background-color 0.2s ease-in-out;
+
+      &.selected {
+        background-color: $primaryHover;
+      }
+
+      &:hover {
+        background-color: $primaryHover;
+        .previewImage {
+          transform: scale(1.05);
+        }
+      }
+
+      .previewImage {
+        display: block;
+        border-radius: 4px;
+        transition: transform 0.2s;
+      }
+    }
+  }
+
+  .mainImageContainer {
+    width: 100%;
+    background-color: $backgroundPrimaryLight;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mainImageWrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+
+      .mainImage {
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

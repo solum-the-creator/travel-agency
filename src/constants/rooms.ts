@@ -20,6 +20,7 @@ export type RoomCard = {
 export type Room = {
   id: number;
   image: string;
+  images: string[];
   title: string;
   price: string;
   rating: number;
@@ -117,6 +118,7 @@ export const rooms: Room[] = [
   {
     id: 1,
     image: roomImage1.src,
+    images: ['/images/room-1/room-1.jpg', '/images/room-1/room-2.jpg', '/images/room-1/room-3.jpg'],
     title: 'Single Room',
     price: '100,000',
     rating: 4,
@@ -127,6 +129,7 @@ export const rooms: Room[] = [
   {
     id: 2,
     image: roomImage2.src,
+    images: ['/images/room-2/room-1.jpg', '/images/room-2/room-2.jpg', '/images/room-2/room-3.jpg'],
     title: 'Double Room',
     price: '150,000',
     rating: 4,
@@ -137,6 +140,7 @@ export const rooms: Room[] = [
   {
     id: 3,
     image: roomImage3.src,
+    images: ['/images/room-3/room-1.jpg', '/images/room-3/room-2.jpg', '/images/room-3/room-3.jpg'],
     title: 'Family Room',
     price: '200,000',
     rating: 4,
@@ -147,6 +151,7 @@ export const rooms: Room[] = [
   {
     id: 4,
     image: roomImage1.src,
+    images: ['/images/room-1/room-1.jpg', '/images/room-1/room-2.jpg', '/images/room-1/room-3.jpg'],
     title: 'Single Room',
     price: '100,000',
     rating: 4,
@@ -157,6 +162,7 @@ export const rooms: Room[] = [
   {
     id: 5,
     image: roomImage2.src,
+    images: ['/images/room-2/room-1.jpg', '/images/room-2/room-2.jpg', '/images/room-2/room-3.jpg'],
     title: 'Double Room',
     price: '150,000',
     rating: 4,
@@ -167,6 +173,7 @@ export const rooms: Room[] = [
   {
     id: 6,
     image: roomImage3.src,
+    images: ['/images/room-3/room-1.jpg', '/images/room-3/room-2.jpg', '/images/room-3/room-3.jpg'],
     title: 'Family Room',
     price: '200,000',
     rating: 4,
@@ -177,6 +184,7 @@ export const rooms: Room[] = [
   {
     id: 7,
     image: roomImage1.src,
+    images: ['/images/room-1/room-1.jpg', '/images/room-1/room-2.jpg', '/images/room-1/room-3.jpg'],
     title: 'Single Room',
     price: '100,000',
     rating: 4,
@@ -187,6 +195,7 @@ export const rooms: Room[] = [
   {
     id: 8,
     image: roomImage2.src,
+    images: ['/images/room-2/room-1.jpg', '/images/room-2/room-2.jpg', '/images/room-2/room-3.jpg'],
     title: 'Double Room',
     price: '150,000',
     rating: 4,
@@ -197,6 +206,7 @@ export const rooms: Room[] = [
   {
     id: 9,
     image: roomImage3.src,
+    images: ['/images/room-3/room-1.jpg', '/images/room-3/room-2.jpg', '/images/room-3/room-3.jpg'],
     title: 'Family Room',
     price: '200,000',
     rating: 4,
