@@ -41,6 +41,10 @@
       "title": "Zimmer und Suiten",
       "text": "Die eleganten Luxusschlafzimmer in dieser Galerie zeigen individuelle Einrichtungs- und Dekorationsideen. Sehen Sie sich Bilder an und finden Sie Ihr perfektes Luxusschlafzimmerdesign.",
       "imageAlt": "Zimmer mit Bett"
+    },
+    "RoomsSection": {
+      "isAvailable": "Verfügbar: {isAvailable, select, true {Ja} false {Nein} other {}}",
+      "bookButton": "Jetzt buchen"
     }
   },
   "Footer": {

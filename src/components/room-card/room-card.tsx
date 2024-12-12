@@ -1,6 +1,7 @@
 import { Button } from '@solumzy/ui-lib-travel-agency';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { ServiceItem } from '../service-item/service-item';
 
@@ -15,6 +16,8 @@ type RoomCardProps = {
 };
 
 export const RoomCard: React.FC<RoomCardProps> = ({ id, image, title, isAvailable, price }) => {
+  const t = useTranslations('RoomsPage.RoomsSection');
+
   return (
     <div className={styles.container}>
       <Link href={`/room/${id}`} className={styles.link}>
@@ -33,7 +36,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({ id, image, title, isAvailabl
           <Link href={`/room/${id}`} className={styles.link}>
             <h3 className={styles.title}>{title}</h3>
           </Link>
-          <span className={styles.status}>Available: {isAvailable ? 'Yes' : 'No'}</span>
+          <span className={styles.status}>{t('isAvailable', { isAvailable })}</span>
           <span className={styles.price}>₦ {price}</span>
         </div>
         <div className={styles.contentFooter}>
@@ -42,7 +45,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({ id, image, title, isAvailabl
             <ServiceItem serviceType="tv" />
             <ServiceItem serviceType="shower" />
           </div>
-          <Button>Book now</Button>
+          <Button>{t('bookButton')}</Button>
         </div>
       </div>
     </div>
