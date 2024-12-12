@@ -38,12 +38,18 @@ export default function RoomPage({ params }: { params: RoomPageParams }) {
     notFound();
   }
 
+  const { title, images, description, price, rating } = room;
+
   return (
     <main>
       <HeroSection />
-      <DetailsSection images={room.images} />
-      <h1>{room.title}</h1>
-      <p>{room.description}</p>
+      <DetailsSection
+        title={title}
+        price={price}
+        rating={rating}
+        description={description}
+        images={images}
+      />
     </main>
   );
 }

@@ -6,6 +6,11 @@
     justify-content: space-between;
     gap: 4rem;
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .galleryWrapper {
       width: 100%;
       max-width: 32rem;
@@ -14,6 +19,55 @@
     .roomInfo {
       width: 100%;
       max-width: 38rem;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid $gray;
+
+      .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 400;
+      }
+
+      .price {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: $gray;
+      }
+
+      .row {
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+        .line {
+          height: 100%;
+          width: 2px;
+          background-color: $gray;
+        }
+
+        .reviews {
+          font-family: 'Poppins', sans-serif;
+          font-size: 1rem;
+          color: $gray;
+        }
+      }
+
+      .description {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        font-family: 'Poppins', sans-serif;
+        max-width: 26rem;
+      }
+
+      .button {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        align-self: flex-start;
+      }
     }
   }
 }

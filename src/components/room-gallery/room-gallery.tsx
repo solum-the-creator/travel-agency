@@ -44,7 +44,7 @@ export const RoomGallery: React.FC<RoomGalleryProps> = ({ images }) => {
             src={selectedImage}
             alt="Selected room"
             fill={true}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 30vw, 400px"
             className={styles.mainImage}
           />
         </div>
