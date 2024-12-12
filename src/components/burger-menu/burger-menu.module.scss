@@ -1,0 +1,63 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .burgerLine {
+    width: 2rem;
+    height: 2px;
+    background-color: $primary;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 75%;
+  max-width: 20rem;
+  background-color: $backgroundSecondary;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  transition: right 0.3s ease;
+  z-index: 10;
+
+  &.open {
+    right: 0;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+.navBarWrapper {
+  display: block;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

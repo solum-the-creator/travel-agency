@@ -7,7 +7,9 @@ export const routes = {
   room: (id: number) => `/rooms/${id}`,
 } as const;
 
-export type RoutePath = (typeof routes)[keyof typeof routes];
+type NonFunctionRoutes = Omit<typeof routes, 'room'>;
+
+export type RoutePath = NonFunctionRoutes[keyof NonFunctionRoutes];
 
 export type Route = {
   titleKey: string;
