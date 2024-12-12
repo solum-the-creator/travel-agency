@@ -7,8 +7,12 @@
   justify-content: center;
 
   .container {
-    padding: 5.625rem 0 4rem;
+    padding: 5.625rem 2rem 4rem;
     border-bottom: 1px solid $stroke;
+
+    @media screen and (max-width: 512px) {
+      padding: 3rem 1rem;
+    }
   }
 
   .bottom {
@@ -25,13 +29,49 @@
 .content {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+
+      gap: 1.5rem;
+    }
+  }
+
+  .linksColumns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    @media screen and (max-width: 512px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
 
   .column {
     max-width: 17rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 28rem;
+    }
 
     .text {
       font-family: 'Raleway', sans-serif;
@@ -42,9 +82,12 @@
     }
 
     &.newsletter {
-      width: 100%;
       max-width: 22rem;
       gap: 1.375rem;
+
+      @media screen and (max-width: 512px) {
+        max-width: 100%;
+      }
 
       .newsletterContent {
         display: flex;

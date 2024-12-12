@@ -35,6 +35,10 @@
       .title {
         font-size: 3rem;
         font-weight: 500;
+
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
       }
 
       .line {

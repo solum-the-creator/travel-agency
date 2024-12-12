@@ -19,7 +19,13 @@ export const RoomSnippetCard: React.FC<RoomSnippetCardProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image src={image} className={styles.image} alt="Room" width={330} height={285} />
+        <Image
+          src={image}
+          className={styles.image}
+          alt="Room"
+          fill={true}
+          sizes="(max-width: 768px) 80vw, 330px"
+        />
         <span className={styles.roomsCount}>{t('roomsAvailable', { roomsCount })}</span>
       </div>
       <div className={styles.content}>

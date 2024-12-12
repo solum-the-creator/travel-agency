@@ -1,6 +1,6 @@
 .container {
-  width: 24rem;
-  height: 24rem;
+  width: 100%;
+  max-width: 22rem;
   padding: 1.625rem 1.625rem 1rem;
   background-color: $secondary;
   display: flex;
@@ -12,8 +12,10 @@
   border-radius: 0.625rem;
 
   .imageWrapper {
+    width: 100%;
     position: relative;
     border-radius: 0.375rem;
+    aspect-ratio: 7 / 6;
 
     .image {
       object-fit: cover;
