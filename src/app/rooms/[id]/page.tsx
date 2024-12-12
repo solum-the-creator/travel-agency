@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { DetailsSection } from '@/components/containers/room-detail-page/details-section/details-section';
 import { HeroSection } from '@/components/containers/room-detail-page/hero-section/hero-section';
+import { RoomImagesSection } from '@/components/containers/room-detail-page/room-images-section/room-images-section';
 import { rooms } from '@/constants/rooms';
 import { getRoomById } from '@/utils/room-utils';
 
@@ -50,6 +51,7 @@ export default function RoomPage({ params }: { params: RoomPageParams }) {
         description={description}
         images={images}
       />
+      <RoomImagesSection images={images} />
     </main>
   );
 }

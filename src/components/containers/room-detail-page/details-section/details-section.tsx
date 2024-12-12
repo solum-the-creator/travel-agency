@@ -29,7 +29,7 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
           </div>
           <div className={styles.roomInfo}>
             <h2 className={styles.title}>{title}</h2>
-            <span className={styles.price}>{price}</span>
+            <span className={styles.price}>₦ {price}</span>
             <div className={styles.row}>
               <Rating value={rating} />
               <div className={styles.line} />
