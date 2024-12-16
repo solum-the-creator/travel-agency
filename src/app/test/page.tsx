@@ -1,18 +1,25 @@
-import { RoomCard } from '@/components/room-card/room-card';
-import { fetchRooms } from '@/services/api/get-rooms';
-import { Room } from '@/types/rooms';
+import { gql } from '@apollo/client';
+
+import { query } from '@/services/apollo-client/apollo-client';
+
+const LIST_COUNTRIES = gql`
+  {
+    countries {
+      name
+      code
+    }
+  }
+`;
 
 export default async function Test() {
-  const rooms = await fetchRooms<Room>();
+  const { data } = await query({ query: LIST_COUNTRIES });
+
+  console.log(data.countries);
 
   return (
     <>
       <div>Test</div>
-      <div>
-        {rooms.map((room) => (
-          <RoomCard key={room.id} {...room} />
-        ))}
-      </div>
+      <div></div>
     </>
   );
 }

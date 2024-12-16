@@ -4,6 +4,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 
 import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
+import { ApolloWrapper } from '@/services/apollo-client/apollo-wrapper';
 
 import '@/styles/global.scss';
 import '@solumzy/ui-lib-travel-agency/dist/index.css';
@@ -25,11 +26,13 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+        <ApolloWrapper>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </ApolloWrapper>
       </body>
     </html>
   );
