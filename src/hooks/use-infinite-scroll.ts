@@ -1,35 +1,39 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
-import { RoomCard } from '@/constants/rooms';
+import { fetchRooms } from '@/services/api/get-rooms';
+import { Room } from '@/types/rooms';
 
-export const useInfiniteScroll = (data: RoomCard[], itemsPerPage: number, delay: number = 0) => {
-  const [visibleData, setVisibleData] = useState<RoomCard[]>([]);
+export const useInfiniteScroll = (itemsPerPage: number, delay: number = 0) => {
+  const [page, setPage] = useState(1);
+  const [visibleData, setVisibleData] = useState<Room[]>([]);
   const [hasMore, setHasMore] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    setVisibleData(data.slice(0, itemsPerPage));
-  }, [data, itemsPerPage]);
-
-  const loadMore = useCallback(() => {
+  const loadMore = useCallback(async () => {
     if (isLoading) {
       return;
     }
 
     setIsLoading(true);
 
-    setTimeout(() => {
-      setVisibleData((prev) => {
-        const nextData = data.slice(prev.length, prev.length + itemsPerPage);
-        if (nextData.length === 0) {
-          setHasMore(false);
-        }
+    try {
+      if (page !== 1) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
 
-        setIsLoading(false);
-        return [...prev, ...nextData];
-      });
-    }, delay);
-  }, [data, itemsPerPage, isLoading, delay]);
+      const newData = await fetchRooms<Room>(page, itemsPerPage);
+      setVisibleData((prev) => [...prev, ...newData]);
+
+      if (newData.length < itemsPerPage) {
+        setHasMore(false);
+      }
+    } catch {
+      setHasMore(false);
+    } finally {
+      setPage((prev) => prev + 1);
+      setIsLoading(false);
+    }
+  }, [itemsPerPage, isLoading, page, delay]);
 
   return { visibleData, hasMore, isLoading, loadMore };
 };

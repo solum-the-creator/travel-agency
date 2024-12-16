@@ -1,6 +1,5 @@
 'use client';
 
-import { roomCards } from '@/constants/rooms';
 import { useInfiniteScroll } from '@/hooks/use-infinite-scroll';
 import { useOnScreen } from '@/hooks/use-on-screen';
 
@@ -12,11 +11,7 @@ import styles from './room-list.module.scss';
 const itemsPerRow = 3;
 
 export const RoomList: React.FC = () => {
-  const { visibleData, loadMore, hasMore, isLoading } = useInfiniteScroll(
-    roomCards,
-    itemsPerRow,
-    1000,
-  );
+  const { visibleData, loadMore, hasMore, isLoading } = useInfiniteScroll(itemsPerRow, 1000);
   const observerRef = useOnScreen(loadMore, hasMore);
 
   return (
