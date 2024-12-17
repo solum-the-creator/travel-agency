@@ -1,0 +1,63 @@
+.modal {
+  max-width: 30rem;
+  padding: 1.5rem;
+
+  .header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $textPrimary;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bookingInfo {
+    background-color: $backgroundPrimaryLight;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+
+    .infoRow {
+      margin: 0.5rem 0;
+
+      strong {
+        color: #555;
+      }
+    }
+  }
+
+  .inputBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    .infoMessage {
+      max-width: 14rem;
+      margin-bottom: 0.5rem;
+      color: $textSecondary;
+      font-size: 0.875rem;
+    }
+
+    .inputWrapper {
+      width: 100%;
+      text-align: left;
+
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .confirmButton {
+    align-self: center;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

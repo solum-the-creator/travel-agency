@@ -12,13 +12,18 @@
   "dependencies": {
     "@apollo/client": "^3.12.3",
     "@apollo/experimental-nextjs-app-support": "^0.11.7",
-    "@solumzy/ui-lib-travel-agency": "^1.0.2",
+    "@emailjs/browser": "^4.4.1",
+    "@hookform/resolvers": "^3.9.1",
+    "@solumzy/ui-lib-travel-agency": "^1.0.4",
     "graphql": "^16.10.0",
+    "i18n-iso-countries": "^7.13.0",
     "next": "14.2.20",
     "next-intl": "^3.26.1",
     "react": "^18",
     "react-datepicker": "^7.5.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.54.1",
+    "zod": "^3.24.1",
     "zustand": "^5.0.2"
   },
   "devDependencies": {

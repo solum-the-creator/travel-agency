@@ -1,11 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@solumzy/ui-lib-travel-agency';
 
 import { useBookingStore } from '@/store/booking-store';
 
 import { DateRangePicker } from '../date-range-picker/date-range-picker';
 import { LocationSelect } from '../location-select/location-select';
+import { ConfirmBookingModal } from '../modals/confirm-booking-modal/confirm-booking-modal';
 import { PersonSelect } from '../person-select/person-select';
 import { RoomTypeSelect } from '../room-type-select/room-type-select';
 
@@ -24,12 +26,18 @@ export const QuickBooking = () => {
     setDateRange,
   } = useBookingStore();
 
+  const [confirmModalOpen, setConfirmModalOpen] = useState(false);
+
   const handleDateRangeChange = (start: Date, end: Date) => {
     setDateRange(start, end);
   };
 
   const openConfirmModal = () => {
-    console.log('Confirm booking');
+    setConfirmModalOpen(true);
+  };
+
+  const closeConfirmModal = () => {
+    setConfirmModalOpen(false);
   };
 
   return (
@@ -56,6 +64,8 @@ export const QuickBooking = () => {
           Book now
         </Button>
       </div>
+
+      <ConfirmBookingModal isOpen={confirmModalOpen} onClose={closeConfirmModal} />
     </div>
   );
 };
