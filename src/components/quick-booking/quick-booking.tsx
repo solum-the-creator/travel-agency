@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { Button } from '@solumzy/ui-lib-travel-agency';
 
-import { RoomType } from '@/types/rooms';
+import { useBookingStore } from '@/store/booking-store';
 
 import { DateRangePicker } from '../date-range-picker/date-range-picker';
 import { LocationSelect } from '../location-select/location-select';
@@ -13,12 +12,25 @@ import { RoomTypeSelect } from '../room-type-select/room-type-select';
 import styles from './quick-booking.module.scss';
 
 export const QuickBooking = () => {
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [endDate, setEndDate] = useState<Date>(new Date());
+  const {
+    currentLocation,
+    roomType,
+    personCount,
+    startDate,
+    endDate,
+    setCurrentLocation,
+    setRoomType,
+    setPersonCount,
+    setDateRange,
+  } = useBookingStore();
 
-  const [currentLocation, setCurrentLocation] = useState<string>('BY');
-  const [roomType, setRoomType] = useState<RoomType>('standard');
-  const [personCount, setPersonCount] = useState<number>(1);
+  const handleDateRangeChange = (start: Date, end: Date) => {
+    setDateRange(start, end);
+  };
+
+  const openConfirmModal = () => {
+    console.log('Confirm booking');
+  };
 
   return (
     <div className={styles.container}>
@@ -35,12 +47,12 @@ export const QuickBooking = () => {
       <DateRangePicker
         selectedStartDate={startDate}
         selectedEndDate={endDate}
-        onStartDateChange={(date) => setStartDate(date)}
-        onEndDateChange={(date) => setEndDate(date)}
+        onStartDateChange={(date) => handleDateRangeChange(date, endDate)}
+        onEndDateChange={(date) => handleDateRangeChange(startDate, date)}
       />
 
       <div className={styles.bookButton}>
-        <Button borderRadius="medium" size="large">
+        <Button borderRadius="medium" size="large" onClick={openConfirmModal}>
           Book now
         </Button>
       </div>
