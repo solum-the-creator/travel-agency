@@ -40,16 +40,33 @@
       .row {
         margin-top: 0.5rem;
         display: flex;
-        align-items: center;
+        align-items: stretch;
         gap: 1.25rem;
 
         .line {
-          height: 100%;
           width: 2px;
           background-color: $gray;
         }
 
         .reviews {
+          font-family: 'Poppins', sans-serif;
+          font-size: 1rem;
+          color: $gray;
+        }
+
+        .location {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-family: 'Poppins', sans-serif;
+          font-size: 1rem;
+          color: $gray;
+        }
+
+        .personCount {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
           font-family: 'Poppins', sans-serif;
           font-size: 1rem;
           color: $gray;

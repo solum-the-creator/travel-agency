@@ -10,7 +10,10 @@
     "title": "Single Room",
     "price": "100,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United States",
+    "personCount": 2,
+    "type": "standard"
   },
   {
     "id": 2,
@@ -23,7 +26,10 @@
     "title": "Double Room",
     "price": "150,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United Kingdom",
+    "personCount": 4,
+    "type": "standard"
   },
   {
     "id": 3,
@@ -36,7 +42,10 @@
     "title": "Family Room",
     "price": "200,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "France",
+    "personCount": 7,
+    "type": "royal"
   },
   {
     "id": 4,
@@ -49,7 +58,10 @@
     "title": "Single Room",
     "price": "100,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United States",
+    "personCount": 2,
+    "type": "standard"
   },
   {
     "id": 5,
@@ -62,7 +74,10 @@
     "title": "Double Room",
     "price": "150,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United Kingdom",
+    "personCount": 4,
+    "type": "standard"
   },
   {
     "id": 6,
@@ -75,7 +90,10 @@
     "title": "Family Room",
     "price": "200,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "France",
+    "personCount": 7,
+    "type": "royal"
   },
   {
     "id": 7,
@@ -88,7 +106,10 @@
     "title": "Single Room",
     "price": "100,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United States",
+    "personCount": 2,
+    "type": "royal"
   },
   {
     "id": 8,
@@ -101,7 +122,10 @@
     "title": "Double Room",
     "price": "150,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "United Kingdom",
+    "personCount": 4,
+    "type": "royal"
   },
   {
     "id": 9,
@@ -114,6 +138,9 @@
     "title": "Family Room",
     "price": "200,000",
     "rating": 4,
-    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall."
+    "description": "This cozy furnished room with fresh renovation consists of a separate entrance hall with mirror, a bedroom with a large double bed and closet, a kitchen combined with the living room. There is also a shower cubicle and an area with sink and toilet cabinet. The windows are large so there is plenty of light in the apartment, but there are also curtains to block out unwanted light if needed. The area is very calm and quiet, in walking distance is everything you need: supermarket, bus stop, park, cinema, school, city hall.",
+    "location": "France",
+    "personCount": 7,
+    "type": "standard"
   }
 ]

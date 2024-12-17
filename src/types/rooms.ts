@@ -12,4 +12,7 @@ export type RoomDetails = Room & {
   images: string[];
   rating: number;
   description: string;
+  location: string;
+  personCount: number;
+  type: RoomType;
 };

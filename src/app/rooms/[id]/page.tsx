@@ -41,19 +41,11 @@ export default async function RoomPage({ params }: { params: RoomPageParams }) {
     notFound();
   }
 
-  const { title, images, description, price, rating } = room;
-
   return (
     <main>
       <HeroSection />
-      <DetailsSection
-        title={title}
-        price={price}
-        rating={rating}
-        description={description}
-        images={images}
-      />
-      <RoomImagesSection images={images} />
+      <DetailsSection {...room} />
+      <RoomImagesSection images={room.images} />
     </main>
   );
 }
