@@ -1,0 +1,36 @@
+.modal {
+  max-width: 34rem;
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: $textPrimary;
+}
+
+.iconWrapper {
+  background-color: #eaf8e6;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: $primary;
+}
+
+.message {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: $textSecondary;
+}

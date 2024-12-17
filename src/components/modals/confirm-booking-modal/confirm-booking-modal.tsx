@@ -12,6 +12,9 @@ import { sendBookingEmail } from '@/services/email/email';
 import { useBookingStore } from '@/store/booking-store';
 import { formatFullDate } from '@/utils/date';
 
+import { ErrorBookingModal } from '../error-booking-modal/error-booking-modal';
+import { SuccessBookingModal } from '../success-booking-modal/success-booking-modal';
+
 import { BookingFormData, bookingSchema } from './confirm-booking-schema';
 
 import styles from './confirm-booking-modal.module.scss';
@@ -26,12 +29,15 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isValid },
   } = useForm<BookingFormData>({
     resolver: zodResolver(bookingSchema),
     mode: 'onTouched',
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     countries.registerLocale(enLocale);
@@ -43,6 +49,9 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
 
   const onSubmit = async (data: BookingFormData) => {
     setIsLoading(true);
+    setIsSuccess(false);
+    setIsError(false);
+
     const isSuccess = await sendBookingEmail({
       fullName: data.fullName,
       phoneNumber: data.phoneNumber,
@@ -56,73 +65,89 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
     setIsLoading(false);
 
     if (isSuccess) {
-      alert('Booking successfully sent!');
+      reset();
+      setIsSuccess(true);
+      onClose();
     } else {
-      alert('Something went wrong. Please try again later.');
+      setIsError(true);
     }
   };
 
+  const handleCloseSuccessModal = () => {
+    setIsSuccess(false);
+  };
+
+  const handleCloseErrorModal = () => {
+    setIsError(false);
+  };
+
   return (
-    <Modal
-      isOpen={isOpen}
-      onClose={onClose}
-      className={styles.modal}
-      header={<h2 className={styles.header}>Confirm Your Booking</h2>}
-    >
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <div className={styles.content}>
-          <div className={styles.bookingInfo}>
-            <p className={styles.infoRow}>
-              <strong>Location:</strong> {locationName}
-            </p>
-            <p className={styles.infoRow}>
-              <strong>Room Type:</strong> {roomType}
-            </p>
-            <p className={styles.infoRow}>
-              <strong>Guests:</strong> {personCount}
-            </p>
-            <p className={styles.infoRow}>
-              <strong>Dates:</strong> {formatedStartDate} - {formatedEndDate}
-            </p>
-          </div>
-
-          <div className={styles.inputBlock}>
-            <p className={styles.infoMessage}>
-              Please provide your details to confirm the booking:
-            </p>
-            <div className={styles.inputWrapper}>
-              <Input
-                label="Full Name"
-                placeholder="Enter your full name"
-                fullWidth={true}
-                {...register('fullName')}
-                error={errors.fullName?.message}
-                className={styles.input}
-              />
+    <>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        className={styles.modal}
+        header={<h2 className={styles.header}>Confirm Your Booking</h2>}
+      >
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+          <div className={styles.content}>
+            <div className={styles.bookingInfo}>
+              <p className={styles.infoRow}>
+                <strong>Location:</strong> {locationName}
+              </p>
+              <p className={styles.infoRow}>
+                <strong>Room Type:</strong> {roomType}
+              </p>
+              <p className={styles.infoRow}>
+                <strong>Guests:</strong> {personCount}
+              </p>
+              <p className={styles.infoRow}>
+                <strong>Dates:</strong> {formatedStartDate} - {formatedEndDate}
+              </p>
             </div>
-            <div className={styles.inputWrapper}>
-              <Input
-                label="Phone Number"
-                placeholder="e.g. +1234567890"
-                fullWidth={true}
-                {...register('phoneNumber')}
-                error={errors.phoneNumber?.message}
-                className={styles.input}
-              />
-            </div>
-          </div>
 
-          <Button
-            borderRadius="medium"
-            size="large"
-            type="submit"
-            disabled={!isValid || isLoading}
-            className={styles.confirmButton}
-          >
-            {isLoading ? 'Sending...' : 'Confirm Booking'}
-          </Button>
-        </div>
-      </form>
-    </Modal>
+            <div className={styles.inputBlock}>
+              <p className={styles.infoMessage}>
+                Please provide your details to confirm the booking:
+              </p>
+              <div className={styles.inputWrapper}>
+                <Input
+                  label="Full Name"
+                  placeholder="Enter your full name"
+                  type="text"
+                  fullWidth={true}
+                  {...register('fullName')}
+                  error={errors.fullName?.message}
+                  className={styles.input}
+                />
+              </div>
+              <div className={styles.inputWrapper}>
+                <Input
+                  label="Phone Number"
+                  placeholder="e.g. +1234567890"
+                  type="tel"
+                  fullWidth={true}
+                  {...register('phoneNumber')}
+                  error={errors.phoneNumber?.message}
+                  className={styles.input}
+                />
+              </div>
+            </div>
+
+            <Button
+              borderRadius="medium"
+              size="large"
+              type="submit"
+              disabled={!isValid || isLoading}
+              className={styles.confirmButton}
+            >
+              {isLoading ? 'Sending...' : 'Confirm Booking'}
+            </Button>
+          </div>
+        </form>
+      </Modal>
+      <SuccessBookingModal isOpen={isSuccess} onClose={handleCloseSuccessModal} />
+      <ErrorBookingModal isOpen={isError} onClose={handleCloseErrorModal} />
+    </>
   );
 };

@@ -1,0 +1,45 @@
+.modal {
+  max-width: 34rem;
+}
+
+.errorContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: $textPrimary;
+}
+
+.iconWrapper {
+  background-color: #ffe5e5;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #d9534f;
+}
+
+.message {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: $textSecondary;
+}
+
+.closeButton {
+  background-color: #d9534f;
+  color: #fff;
+  font-weight: 500;
+  &:hover {
+    background-color: darken(#d9534f, 10%);
+  }
+}
