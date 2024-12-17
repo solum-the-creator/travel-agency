@@ -6,6 +6,8 @@ export type Room = {
   isAvailable: boolean;
 };
 
+export type RoomType = 'standard' | 'royal';
+
 export type RoomDetails = Room & {
   images: string[];
   rating: number;

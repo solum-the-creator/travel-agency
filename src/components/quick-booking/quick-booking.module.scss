@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: 80rem;
+  padding: 2rem;
+  background-color: $backgroundPrimary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}

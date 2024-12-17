@@ -1,11 +1,17 @@
 .section {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
   background-color: $backgroundSecondary;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
   }
 
   .content {
@@ -54,5 +60,20 @@
     .image {
       object-fit: cover;
     }
+  }
+}
+
+.bookingWrapper {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  z-index: 10;
+
+  @media screen and (max-width: 1300px) {
+    bottom: 0rem;
+  }
+
+  @media screen and (max-width: 1280px) {
+    position: static;
   }
 }

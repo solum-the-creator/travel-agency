@@ -1,0 +1,41 @@
+@import 'react-datepicker/dist/react-datepicker.css';
+
+.react-datepicker {
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+.react-datepicker__day--selected {
+  background-color: $primary !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day--in-range {
+  background-color: $primaryHover !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day--range-start {
+  background-color: $primary !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day--range-end {
+  background-color: $primary !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: $primaryHover !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day--in-selecting-range {
+  background-color: $primary !important;
+  color: $textLight !important;
+}
+
+.react-datepicker__day--selecting-range-start {
+  background-color: $primary !important;
+  color: $textLight !important;
+}
