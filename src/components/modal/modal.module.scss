@@ -8,23 +8,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 13;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
 
 .modal {
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: $backgroundSecondary;
+  border-radius: 0.5rem;
   max-width: 80rem;
   width: 100%;
+  max-height: 90vh;
   padding: 2rem;
   position: relative;
   animation: modalShow 0.3s ease-in-out;
 
   @keyframes modalShow {
     from {
-      transform: translateY(20px);
+      transform: translateY(1.5rem);
       opacity: 0;
     }
     to {
@@ -57,5 +58,28 @@
 }
 
 .content {
+  flex-grow: 1;
+  overflow-y: auto;
   text-align: center;
+  max-height: calc(90vh - 8rem);
+  padding-right: 1rem;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $stroke;
+    border-radius: 0.25rem;
+    border: 2px solid #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $primaryHover;
+  }
 }
