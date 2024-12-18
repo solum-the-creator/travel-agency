@@ -3,8 +3,36 @@
   max-width: 80rem;
   padding: 2rem;
   background-color: $backgroundPrimary;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+
+  @media (max-width: 1140px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 2rem;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.bookButton {
+  button {
+    width: max-content;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
 }
