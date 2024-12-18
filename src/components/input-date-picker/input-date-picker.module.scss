@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
 
   :global(.react-datepicker-wrapper) {
     width: 100%;
@@ -13,6 +12,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 0.5rem;
   }
 }
 .datePicker {

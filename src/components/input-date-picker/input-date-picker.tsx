@@ -18,7 +18,7 @@ type CustomInputProps = {
 export const InputDatePicker = ({ label, ...props }: InputDatePickerProps) => {
   const CustomInput = forwardRef<HTMLButtonElement, CustomInputProps>(
     ({ value, onClick, className }, ref) => (
-      <button className={className} onClick={onClick} ref={ref}>
+      <button className={className} type="button" onClick={onClick} ref={ref}>
         <span>{value}</span>
       </button>
     ),

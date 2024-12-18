@@ -5,6 +5,7 @@ export const sendBookingEmail = async (formData: {
   phoneNumber: string;
   locationName: string;
   roomType: string;
+  roomName?: string;
   personCount: number;
   startDate: string;
   endDate: string;
