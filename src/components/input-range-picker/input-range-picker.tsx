@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { InputDatePicker } from '../input-date-picker/input-date-picker';
 
 type InputRangePickerProps = {
@@ -13,10 +15,12 @@ export const InputRangePicker: React.FC<InputRangePickerProps> = ({
   onStartDateChange,
   onEndDateChange,
 }) => {
+  const t = useTranslations('RoomBookingModal');
+
   return (
     <>
       <InputDatePicker
-        label="Check-in"
+        label={t('dateStart')}
         selected={selectedStartDate}
         selectsStart={true}
         onChange={(date) => onStartDateChange(date as Date)}
@@ -26,7 +30,7 @@ export const InputRangePicker: React.FC<InputRangePickerProps> = ({
       />
 
       <InputDatePicker
-        label="Check-out"
+        label={t('dateEnd')}
         selectsEnd={true}
         selected={selectedEndDate}
         onChange={(date) => onEndDateChange(date as Date)}

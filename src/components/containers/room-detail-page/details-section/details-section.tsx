@@ -38,6 +38,14 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
   const t = useTranslations('RoomDetailsPage.DetailsSection');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={styles.section}>
       <BaseBlock>
@@ -61,7 +69,9 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
               <div className={styles.line} />
               <div className={styles.personCount}>
                 <Image src={personIcon} alt="Person icon" width={16} height={16} />
-                <span className={styles.label}>{personCount} person</span>
+                <span className={styles.label}>
+                  {personCount} {t('person')}
+                </span>
               </div>
             </div>
             <p className={styles.description}>{description}</p>
@@ -69,14 +79,14 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
               variant="outline"
               borderRadius="medium"
               className={styles.button}
-              onClick={() => setIsModalOpen(true)}
+              onClick={openModal}
             >
               {t('reservationButton')}
             </Button>
           </div>
           <RoomBookingModal
             isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
+            onClose={closeModal}
             roomName={title}
             locationName={location}
             roomType={type}

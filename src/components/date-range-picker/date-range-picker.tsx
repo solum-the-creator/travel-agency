@@ -1,5 +1,6 @@
 import calendarIcon from '@public/images/icons/calendar-icon.svg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { DatePicker } from '../date-picker/date-picker';
 
@@ -18,11 +19,13 @@ export const DateRangePicker: React.FC<DatePickerProps> = ({
   onStartDateChange,
   onEndDateChange,
 }) => {
+  const t = useTranslations('QuickBooking');
+
   return (
     <>
       <div className={styles.datePicker}>
         <DatePicker
-          label="Check-in"
+          label={t('dateStart')}
           icon={<Image src={calendarIcon} alt="" width={16} height={16} />}
           selected={selectedStartDate}
           selectsStart={true}
@@ -34,7 +37,7 @@ export const DateRangePicker: React.FC<DatePickerProps> = ({
       </div>
       <div className={styles.datePicker}>
         <DatePicker
-          label="Check-out"
+          label={t('dateEnd')}
           icon={<Image src={calendarIcon} alt="" width={16} height={16} />}
           selectsEnd={true}
           selected={selectedEndDate}

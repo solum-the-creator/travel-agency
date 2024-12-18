@@ -54,7 +54,8 @@
     },
     "DetailsSection": {
       "reviewCount": "5 Customer Review",
-      "reservationButton": "Reservation"
+      "reservationButton": "Reservation",
+      "person": "person"
     }
   },
   "Footer": {
@@ -91,5 +92,62 @@
   },
   "Common": {
     "roomsAvailable": "{roomsCount} rooms available"
+  },
+  "QuickBooking": {
+    "location": "Location",
+    "locationAlt": "Map Marker Icon",
+    "roomType": "Room Type",
+    "roomTypeAlt": "Room Type Icon",
+    "personCount": "Person",
+    "personCountAlt": "Person Count Icon",
+    "dateStart": "Check-in",
+    "dateEnd": "Check-out",
+    "bookButton": "Book now"
+  },
+  "RoomType": {
+    "standard": "Standard",
+    "royal": "Royal"
+  },
+  "ConfirmBooking": {
+    "title": "Confirm Your Booking",
+    "locationLabel": "Location",
+    "roomTypeLabel": "Room Type",
+    "personCountLabel": "Guests",
+    "datesLabel": "Dates",
+    "infoMessage": "Please provide your details to confirm the booking:",
+    "nameLabel": "Full Name",
+    "phoneLabel": "Phone Number",
+    "namePlaceholder": "Enter your full name",
+    "phonePlaceholder": "e.g. +1234567890",
+    "bookingButton": "Confirm Booking",
+    "bookingLoadingButton": "Sending..."
+  },
+  "SuccessBooking": {
+    "successIconAlt": "Success Icon",
+    "title": "Booking Successful!",
+    "message": "Your booking has been successfully confirmed. We will contact you soon to finalize the details. Thank you for choosing our service!",
+    "closeButton": "Ok"
+  },
+  "ErrorBooking": {
+    "errorIconAlt": "Error Icon",
+    "title": "Booking Failed",
+    "message": "Something went wrong while processing your booking. Please try again later or contact our support team.",
+    "closeButton": "Try Again"
+  },
+  "RoomBookingModal": {
+    "title": "Booking for",
+    "roomType": "Room Type",
+    "location": "Location",
+    "person": "Person",
+    "price": "Price per night",
+    "message": "Please provide your details to confirm the booking:",
+    "dateStart": "Check-in",
+    "dateEnd": "Check-out",
+    "nameLabel": "Full Name",
+    "phoneLabel": "Phone Number",
+    "namePlaceholder": "Enter your full name",
+    "phonePlaceholder": "e.g. +1234567890",
+    "bookingButton": "Confirm Booking",
+    "bookingLoadingButton": "Sending..."
   }
 }

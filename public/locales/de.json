@@ -54,7 +54,8 @@
     },
     "DetailsSection": {
       "reviewCount": "5 Kundenbewertung",
-      "reservationButton": "Reservierung"
+      "reservationButton": "Reservierung",
+      "person": "person"
     }
   },
   "Footer": {
@@ -91,5 +92,62 @@
   },
   "Common": {
     "roomsAvailable": "{roomsCount} verfügbar"
+  },
+  "QuickBooking": {
+    "location": "Lage",
+    "locationAlt": "Kartenmarkierungssymbol",
+    "roomType": "Zimmerkategorie",
+    "roomTypeAlt": "Zimmertyp Symbol",
+    "personCount": "Person",
+    "personCountAlt": "Person Count Icon",
+    "dateStart": "Einchecken",
+    "dateEnd": "Auschecken",
+    "bookButton": "Jetzt buchen"
+  },
+  "RoomType": {
+    "standard": "Standard",
+    "royal": "Königlich"
+  },
+  "ConfirmBooking": {
+    "title": "Bestätigen Sie Ihre Buchung",
+    "locationLabel": "Lage",
+    "roomTypeLabel": "Zimmerkategorie",
+    "personCountLabel": "Freuen",
+    "datesLabel": "Reisedaten",
+    "infoMessage": "Bitte geben Sie Ihre Daten an, um die Buchung zu bestätigen:",
+    "nameLabel": "Vollständiger Name",
+    "phoneLabel": "Telefonnummer",
+    "namePlaceholder": "Name eingeben",
+    "phonePlaceholder": "z.B. +1234567890",
+    "bookingButton": "Buchung bestätigen",
+    "bookingLoadingButton": "Senden..."
+  },
+  "SuccessBooking": {
+    "successIconAlt": "Erfolgsikone",
+    "title": "Buchung erfolgreich!",
+    "message": "Ihre Buchung wurde erfolgreich bestätigt. Wir werden uns in Kürze mit Ihnen in Verbindung setzen, um die Details zu klären. Vielen Dank, dass Sie sich für unseren Service entschieden haben!",
+    "closeButton": "Okay"
+  },
+  "ErrorBooking": {
+    "errorIconAlt": "Fehlersymbol",
+    "title": "Buchung fehlgeschlagen",
+    "message": "Bei der Bearbeitung Ihrer Buchung ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal oder kontaktieren Sie unser Support-Team.",
+    "closeButton": "Erneut versuchen"
+  },
+  "RoomBookingModal": {
+    "title": "Buchung für",
+    "roomType": "Zimmerkategorie",
+    "location": "Lage",
+    "person": "Person",
+    "price": "Preis pro Nacht",
+    "message": "Bitte geben Sie Ihre Daten an, um die Buchung zu bestätigen:",
+    "dateStart": "Einchecken",
+    "dateEnd": "Auschecken",
+    "nameLabel": "Vollständiger Name",
+    "phoneLabel": "Telefonnummer",
+    "namePlaceholder": "Name eingeben",
+    "phonePlaceholder": "z.B. +1234567890",
+    "bookingButton": "Buchung bestätigen",
+    "bookingLoadingButton": "Senden..."
   }
 }

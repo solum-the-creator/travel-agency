@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Input } from '@solumzy/ui-lib-travel-agency';
 import countries from 'i18n-iso-countries';
 import enLocale from 'i18n-iso-countries/langs/en.json';
+import { useTranslations } from 'next-intl';
 
 import { Modal } from '@/components/modal/modal';
 import { sendBookingEmail } from '@/services/email/email';
@@ -25,6 +26,7 @@ type ConfirmBookingModalProps = {
 };
 
 export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen, onClose }) => {
+  const t = useTranslations('ConfirmBooking');
   const { currentLocation, roomType, personCount, startDate, endDate } = useBookingStore();
   const {
     register,
@@ -87,33 +89,31 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
         isOpen={isOpen}
         onClose={onClose}
         className={styles.modal}
-        header={<h2 className={styles.header}>Confirm Your Booking</h2>}
+        header={<h2 className={styles.header}>{t('title')}</h2>}
       >
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div className={styles.content}>
             <div className={styles.bookingInfo}>
               <p className={styles.infoRow}>
-                <strong>Location:</strong> {locationName}
+                <strong>{t('locationLabel')}:</strong> {locationName}
               </p>
               <p className={styles.infoRow}>
-                <strong>Room Type:</strong> {roomType}
+                <strong>{t('roomTypeLabel')}:</strong> {roomType}
               </p>
               <p className={styles.infoRow}>
-                <strong>Guests:</strong> {personCount}
+                <strong>{t('personCountLabel')}:</strong> {personCount}
               </p>
               <p className={styles.infoRow}>
-                <strong>Dates:</strong> {formatedStartDate} - {formatedEndDate}
+                <strong>{t('datesLabel')}:</strong> {formatedStartDate} - {formatedEndDate}
               </p>
             </div>
 
             <div className={styles.inputBlock}>
-              <p className={styles.infoMessage}>
-                Please provide your details to confirm the booking:
-              </p>
+              <p className={styles.infoMessage}>{t('infoMessage')}</p>
               <div className={styles.inputWrapper}>
                 <Input
-                  label="Full Name"
-                  placeholder="Enter your full name"
+                  label={t('nameLabel')}
+                  placeholder={t('namePlaceholder')}
                   type="text"
                   fullWidth={true}
                   {...register('fullName')}
@@ -123,8 +123,8 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
               </div>
               <div className={styles.inputWrapper}>
                 <Input
-                  label="Phone Number"
-                  placeholder="e.g. +1234567890"
+                  label={t('phoneLabel')}
+                  placeholder={t('phonePlaceholder')}
                   type="tel"
                   fullWidth={true}
                   {...register('phoneNumber')}
@@ -141,7 +141,7 @@ export const ConfirmBookingModal: React.FC<ConfirmBookingModalProps> = ({ isOpen
               disabled={!isValid || isLoading}
               className={styles.confirmButton}
             >
-              {isLoading ? 'Sending...' : 'Confirm Booking'}
+              {isLoading ? t('bookingLoadingButton') : t('bookingButton')}
             </Button>
           </div>
         </form>

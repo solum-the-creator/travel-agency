@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Input } from '@solumzy/ui-lib-travel-agency';
+import { useTranslations } from 'next-intl';
 
 import { InputRangePicker } from '@/components/input-range-picker/input-range-picker';
 import { Modal } from '@/components/modal/modal';
@@ -37,6 +38,8 @@ export const RoomBookingModal: React.FC<RoomBookingModalProps> = ({
   personCount,
   price,
 }) => {
+  const t = useTranslations('RoomBookingModal');
+
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -103,29 +106,31 @@ export const RoomBookingModal: React.FC<RoomBookingModalProps> = ({
         isOpen={isOpen}
         onClose={onClose}
         className={styles.modal}
-        header={<h2 className={styles.header}>Booking for {roomName}</h2>}
+        header={
+          <h2 className={styles.header}>
+            {t('title')} {roomName}
+          </h2>
+        }
       >
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <div className={styles.content}>
             <div className={styles.bookingInfo}>
               <p className={styles.infoRow}>
-                <strong>Room Type:</strong> {roomType}
+                <strong>{t('roomType')}:</strong> {roomType}
               </p>
               <p className={styles.infoRow}>
-                <strong>Location:</strong> {locationName}
+                <strong>{t('location')}:</strong> {locationName}
               </p>
               <p className={styles.infoRow}>
-                <strong>Person:</strong> {personCount}
+                <strong>{t('person')}:</strong> {personCount}
               </p>
               <p className={styles.infoRow}>
-                <strong>Price per Night:</strong> {price}
+                <strong>{t('price')}:</strong> {price}
               </p>
             </div>
 
             <div className={styles.datePickerBlock}>
-              <p className={styles.infoMessage}>
-                Please provide your details to confirm the booking:
-              </p>
+              <p className={styles.infoMessage}>{t('message')}</p>
               <div className={styles.datepicker}>
                 <InputRangePicker
                   selectedStartDate={startDate}
@@ -139,8 +144,8 @@ export const RoomBookingModal: React.FC<RoomBookingModalProps> = ({
             <div className={styles.inputBlock}>
               <div className={styles.inputWrapper}>
                 <Input
-                  label="Full Name"
-                  placeholder="Enter your full name"
+                  label={t('nameLabel')}
+                  placeholder={t('namePlaceholder')}
                   type="text"
                   fullWidth={true}
                   {...register('fullName')}
@@ -150,8 +155,8 @@ export const RoomBookingModal: React.FC<RoomBookingModalProps> = ({
               </div>
               <div className={styles.inputWrapper}>
                 <Input
-                  label="Phone Number"
-                  placeholder="e.g. +1234567890"
+                  label={t('phoneLabel')}
+                  placeholder={t('phonePlaceholder')}
                   type="tel"
                   fullWidth={true}
                   {...register('phoneNumber')}
@@ -168,7 +173,7 @@ export const RoomBookingModal: React.FC<RoomBookingModalProps> = ({
             disabled={!isValid || isLoading}
             className={styles.confirmButton}
           >
-            {isLoading ? 'Sending...' : 'Confirm Booking'}
+            {isLoading ? t('bookingLoadingButton') : t('bookingButton')}
           </Button>
         </form>
       </Modal>

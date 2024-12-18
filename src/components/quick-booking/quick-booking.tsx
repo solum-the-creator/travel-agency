@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Button } from '@solumzy/ui-lib-travel-agency';
+import { useTranslations } from 'next-intl';
 
 import { useBookingStore } from '@/store/booking-store';
 
@@ -14,6 +15,8 @@ import { RoomTypeSelect } from '../room-type-select/room-type-select';
 import styles from './quick-booking.module.scss';
 
 export const QuickBooking = () => {
+  const t = useTranslations('QuickBooking');
+
   const {
     currentLocation,
     roomType,
@@ -61,7 +64,7 @@ export const QuickBooking = () => {
 
       <div className={styles.bookButton}>
         <Button borderRadius="medium" size="large" onClick={openConfirmModal}>
-          Book now
+          {t('bookButton')}
         </Button>
       </div>
 

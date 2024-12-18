@@ -1,6 +1,7 @@
 import { ChangeEvent } from 'react';
 import personIcon from '@public/images/icons/person-icon.svg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Select } from '../select/select';
 
@@ -10,6 +11,8 @@ type PersonSelectProps = {
 };
 
 export const PersonSelect: React.FC<PersonSelectProps> = ({ value, onChange }) => {
+  const t = useTranslations('QuickBooking');
+
   const persons = Array.from({ length: 7 }, (_, index) => ({
     value: (index + 1).toString(),
     label: `0${index + 1}`,
@@ -22,11 +25,11 @@ export const PersonSelect: React.FC<PersonSelectProps> = ({ value, onChange }) =
 
   return (
     <Select
-      label="Person"
+      label={t('personCount')}
       options={persons}
       value={value}
       onChange={handleChange}
-      icon={<Image src={personIcon} alt="" width={16} height={16} />}
+      icon={<Image src={personIcon} alt={t('personCountAlt')} width={16} height={16} />}
     />
   );
 };

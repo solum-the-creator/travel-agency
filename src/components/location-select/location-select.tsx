@@ -2,6 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import mapMarkerIcon from '@public/images/icons/map-marker-icon.svg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { COUNTRIES_QUERY } from '@/services/apollo-client/query';
 import { Country } from '@/types/country';
@@ -14,6 +15,7 @@ type LocationSelectProps = {
 };
 
 export const LocationSelect: React.FC<LocationSelectProps> = ({ currentCountryCode, onChange }) => {
+  const t = useTranslations('QuickBooking');
   const { data } = useQuery<{ countries: Country[] }>(COUNTRIES_QUERY);
 
   const [selectedCountry, setSelectedCountry] = useState<string>(currentCountryCode || '');
@@ -41,8 +43,8 @@ export const LocationSelect: React.FC<LocationSelectProps> = ({ currentCountryCo
       options={countryOptions}
       value={selectedCountry}
       onChange={handleChange}
-      label="Location"
-      icon={<Image src={mapMarkerIcon} alt="Map Marker Icon" width={16} height={16} />}
+      label={t('location')}
+      icon={<Image src={mapMarkerIcon} alt={t('locationAlt')} width={16} height={16} />}
     />
   );
 };
